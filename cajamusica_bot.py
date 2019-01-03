@@ -8,7 +8,7 @@ import random
 import unidecode
 
 # CONSTANTS
-TOKEN = "655478604:AAEstqnyDWO-EUDzwpa6AFZmMHPLR0DdssE"
+TOKEN = ""
 
 if __name__ == '__main__':
     logging.basicConfig(filename='cajamusica.log', filemode='a+', level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s: %(message)s',)
@@ -45,7 +45,7 @@ if __name__ == '__main__':
             if cm.player_win(player.id):
                 cm.remove_player(player.id)
                 bot.send_message(message.chat.id, "Enhorabuena " + player.first_name + "!! Has conseguido llenar la caja de música.\n"+
-                "¿Has descubierto las reglas que rigen la caja de música o ha sido suerte?\n"+
+                "¿Has descubierto las reglas que rigen la caja de música o ha sido suerte? "+
                 "¿Erez capaz de llenarla de nuevo?", parse_mode="Markdown")
         else:
             cm.remove_player(player.id)
