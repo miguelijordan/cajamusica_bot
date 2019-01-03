@@ -14,5 +14,4 @@ class Dictionary:
         return synonyms
 
     def antonyms(self, word):
-        word = word.lower()
         pass
