@@ -41,7 +41,7 @@ if __name__ == '__main__':
         entra = cm.fit(text)
         if entra:
             cm.add_word_player(text, player.id)
-            bot.reply_to(message, original_text + " si entra.")
+            bot.reply_to(message, original_text + " sí entra.")
             if cm.player_win(player.id):
                 cm.remove_player(player.id)
                 bot.send_message(message.chat.id, "Enhorabuena " + player.first_name + "!! Has conseguido llenar la caja de música.\n"+
